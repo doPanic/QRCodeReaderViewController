@@ -165,11 +165,43 @@
  * scanning the codes when the view will appear.
  * @param showSwitchCameraButton Flag to display the switch camera button.
  * @param showTorchButton Flag to know whether the view controller start
+ * @param isInternetConnectionRequired If set to YES, completion block will only be triggered if there is an internet connection
+ * scanning the codes when the view will appear.
+ * @since 4.0.2
+ */
+- (nonnull id)initWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad showSwitchCameraButton:(BOOL)showSwitchCameraButton showTorchButton:(BOOL)showTorchButton isInternetConnectionRequired:(BOOL)isRequired inactiveIndicatorText:(nullable NSString *)inactiveText inactiveIndicatorColor:(nullable UIColor *)inactiveColor activeIndicatorText:(nullable NSString *)activeText  activeIndicatorColor:(nullable UIColor *)activeColor;
+
+/**
+ * @abstract Initializes a view controller using a cancel button title and
+ * a code reader.
+ * @param cancelTitle The title of the cancel button.
+ * @param codeReader The reader to decode the codes.
+ * @param startScanningAtLoad Flag to know whether the view controller start
+ * scanning the codes when the view will appear.
+ * @param showSwitchCameraButton Flag to display the switch camera button.
+ * @param showTorchButton Flag to know whether the view controller start
  * scanning the codes when the view will appear.
  * @see initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:
  * @since 4.0.0
  */
 + (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad showSwitchCameraButton:(BOOL)showSwitchCameraButton showTorchButton:(BOOL)showTorchButton;
+
+/**
+ * @abstract Initializes a view controller using a cancel button title and
+ * a code reader.
+ * @param cancelTitle The title of the cancel button.
+ * @param codeReader The reader to decode the codes.
+ * @param startScanningAtLoad Flag to know whether the view controller start
+ * scanning the codes when the view will appear.
+ * @param showSwitchCameraButton Flag to display the switch camera button.
+ * @param showTorchButton Flag to know whether the view controller start
+ * scanning the codes when the view will appear.
+ * @param isInternetConnectionRequired If set to YES, completion block will only be triggered if there is an internet connection
+ * @see initWithCancelButtonTitle:codeReader:startScanningAtLoad:showSwitchCameraButton:showTorchButton:isInternetConnectionRequired:
+ * @since 4.0.2
+ */
++ (nonnull instancetype)readerWithCancelButtonTitle:(nullable NSString *)cancelTitle codeReader:(nonnull QRCodeReader *)codeReader startScanningAtLoad:(BOOL)startScanningAtLoad showSwitchCameraButton:(BOOL)showSwitchCameraButton showTorchButton:(BOOL)showTorchButton isInternetConnectionRequired:(BOOL)isRequired inactiveIndicatorText:(nullable NSString *)inactiveText inactiveIndicatorColor:(nullable UIColor *)inactiveColor activeIndicatorText:(nullable NSString *)activeText  activeIndicatorColor:(nullable UIColor *)activeColor;
+
 
 #pragma mark - Controlling the Reader
 /** @name Controlling the Reader */

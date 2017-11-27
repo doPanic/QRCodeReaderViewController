@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BFA60691FCAAEAB00F65FE7 /* QRCodeReaderNetStatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA60681FCAAEAB00F65FE7 /* QRCodeReaderNetStatView.m */; };
+		95E2A6854DD63E68124FDCAB /* libPods-QRCodeReaderViewControllerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62647A53F6DBB391D04EF6EC /* libPods-QRCodeReaderViewControllerExample.a */; };
 		CE29601E1987F124008FA93B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE29601D1987F124008FA93B /* main.m */; };
 		CE2960211987F124008FA93B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2960201987F124008FA93B /* AppDelegate.m */; };
 		CE2960241987F124008FA93B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2960231987F124008FA93B /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BFA60671FCAAEAB00F65FE7 /* QRCodeReaderNetStatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderNetStatView.h; sourceTree = "<group>"; };
+		1BFA60681FCAAEAB00F65FE7 /* QRCodeReaderNetStatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderNetStatView.m; sourceTree = "<group>"; };
+		427A5F785C8117CA72FA2573 /* Pods-QRCodeReaderViewControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeReaderViewControllerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRCodeReaderViewControllerExample/Pods-QRCodeReaderViewControllerExample.release.xcconfig"; sourceTree = "<group>"; };
+		62647A53F6DBB391D04EF6EC /* libPods-QRCodeReaderViewControllerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRCodeReaderViewControllerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2960181987F124008FA93B /* QRCodeReaderViewControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeReaderViewControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE29601C1987F124008FA93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE29601D1987F124008FA93B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +65,7 @@
 		CEAF7A681A16B05400991CF8 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
 		CEF6D1621BE7B2B0006D575D /* QRToggleTorchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRToggleTorchButton.h; sourceTree = "<group>"; };
 		CEF6D1631BE7B2B0006D575D /* QRToggleTorchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRToggleTorchButton.m; sourceTree = "<group>"; };
+		F7482589950FEBE7CA3B35B8 /* Pods-QRCodeReaderViewControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeReaderViewControllerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRCodeReaderViewControllerExample/Pods-QRCodeReaderViewControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E2A6854DD63E68124FDCAB /* libPods-QRCodeReaderViewControllerExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DDCA742C52627F5554CA452 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62647A53F6DBB391D04EF6EC /* libPods-QRCodeReaderViewControllerExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67F1BD98A064F72CEA931B21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7482589950FEBE7CA3B35B8 /* Pods-QRCodeReaderViewControllerExample.debug.xcconfig */,
+				427A5F785C8117CA72FA2573 /* Pods-QRCodeReaderViewControllerExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE29600F1987F124008FA93B = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +111,8 @@
 				CE29601A1987F124008FA93B /* QRCodeReaderViewControllerExample */,
 				CEAE68201D3EB66400A77AB2 /* QRCodeReaderViewControllerTests */,
 				CE2960191987F124008FA93B /* Products */,
+				67F1BD98A064F72CEA931B21 /* Pods */,
+				5DDCA742C52627F5554CA452 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +162,8 @@
 				CEAF7A681A16B05400991CF8 /* QRCameraSwitchButton.m */,
 				CEF6D1621BE7B2B0006D575D /* QRToggleTorchButton.h */,
 				CEF6D1631BE7B2B0006D575D /* QRToggleTorchButton.m */,
+				1BFA60671FCAAEAB00F65FE7 /* QRCodeReaderNetStatView.h */,
+				1BFA60681FCAAEAB00F65FE7 /* QRCodeReaderNetStatView.m */,
 			);
 			name = QRCodeReaderViewController;
 			path = ../QRCodeReaderViewController;
@@ -156,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2960381987F125008FA93B /* Build configuration list for PBXNativeTarget "QRCodeReaderViewControllerExample" */;
 			buildPhases = (
+				A2FEA8B7946A0C5C4A9545E0 /* [CP] Check Pods Manifest.lock */,
 				CE2960141987F124008FA93B /* Sources */,
 				CE2960151987F124008FA93B /* Frameworks */,
 				CE2960161987F124008FA93B /* Resources */,
+				13F61995BAED48736CE90D8F /* [CP] Embed Pods Frameworks */,
+				CC087984F8A27C88B29C300B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,6 +230,7 @@
 				TargetAttributes = {
 					CE2960171987F124008FA93B = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = S9MXN78B3E;
 					};
 					CEAE681E1D3EB66400A77AB2 = {
 						CreatedOnToolsVersion = 7.3;
@@ -243,12 +276,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13F61995BAED48736CE90D8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCodeReaderViewControllerExample/Pods-QRCodeReaderViewControllerExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2FEA8B7946A0C5C4A9545E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QRCodeReaderViewControllerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC087984F8A27C88B29C300B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCodeReaderViewControllerExample/Pods-QRCodeReaderViewControllerExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE2960141987F124008FA93B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE2960241987F124008FA93B /* ViewController.m in Sources */,
+				1BFA60691FCAAEAB00F65FE7 /* QRCodeReaderNetStatView.m in Sources */,
 				CEF6D1641BE7B2B0006D575D /* QRToggleTorchButton.m in Sources */,
 				CEAF7A691A16B05400991CF8 /* QRCameraSwitchButton.m in Sources */,
 				CE99CEFD1A9BCA1100CB8AD8 /* QRCodeReader.m in Sources */,
@@ -375,12 +460,13 @@
 		};
 		CE2960391987F125008FA93B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7482589950FEBE7CA3B35B8 /* Pods-QRCodeReaderViewControllerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S9MXN78B3E;
 				INFOPLIST_FILE = QRCodeReaderViewControllerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickloriot.${PRODUCT_NAME:rfc1034identifier}";
@@ -391,12 +477,13 @@
 		};
 		CE29603A1987F125008FA93B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 427A5F785C8117CA72FA2573 /* Pods-QRCodeReaderViewControllerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S9MXN78B3E;
 				INFOPLIST_FILE = QRCodeReaderViewControllerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yannickloriot.${PRODUCT_NAME:rfc1034identifier}";

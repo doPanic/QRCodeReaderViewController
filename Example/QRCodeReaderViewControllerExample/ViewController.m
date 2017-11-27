@@ -42,7 +42,7 @@
 
     dispatch_once(&onceToken, ^{
       QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-      vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+      vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:NO showTorchButton:NO isInternetConnectionRequired:YES inactiveIndicatorText:nil inactiveIndicatorColor:nil activeIndicatorText:nil activeIndicatorColor:nil];
       vc.modalPresentationStyle = UIModalPresentationFormSheet;
     });
     vc.delegate = self;
