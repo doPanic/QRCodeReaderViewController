@@ -249,16 +249,20 @@
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
   for (AVMetadataObject *current in metadataObjects) {
-    if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
-        && [_metadataObjectTypes containsObject:current.type]) {
-      NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];
+      if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
+          && [_metadataObjectTypes containsObject:current.type]) {
+          NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];
 
-      if (_completionBlock) {
-        _completionBlock(scannedResult);
+        BOOL shouldTriggerCompletion = YES;
+        if ([self.permissionDatasource respondsToSelector:@selector(shouldTriggerCompletionEvents)]) {
+            shouldTriggerCompletion = [self.permissionDatasource shouldTriggerCompletionEvents];
+        }
+        if (_completionBlock && shouldTriggerCompletion) {
+            _completionBlock(scannedResult);
+        }
+        
+        break;
       }
-
-      break;
-    }
   }
 }
 

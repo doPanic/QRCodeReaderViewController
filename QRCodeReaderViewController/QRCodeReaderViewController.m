@@ -39,7 +39,7 @@
 #define kDefaultNetStatHeight_iPhone 20.
 #define kDefaultNetStatHeight_iPad 25
 
-@interface QRCodeReaderViewController ()
+@interface QRCodeReaderViewController () <QRCodeReaderPermissionDatasource>
 @property (strong, nonatomic) QRCameraSwitchButton *switchCameraButton;
 @property (strong, nonatomic) QRToggleTorchButton *toggleTorchButton;
 @property (strong, nonatomic) QRCodeReaderView     *cameraView;
@@ -124,6 +124,7 @@
         
         self.view.backgroundColor   = [UIColor blackColor];
         self.codeReader             = codeReader;
+        self.codeReader.permissionDatasource = self;
         self.startScanningAtLoad    = startScanningAtLoad;
         self.showSwitchCameraButton = showSwitchCameraButton;
         self.showTorchButton        = showTorchButton;
@@ -204,9 +205,7 @@
     [super viewWillAppear:animated];
     
     if (_startScanningAtLoad) {
-        if (!self.isInternetRequired || (self.isInternetRequired && [self isDeviceConnectedToInternet])) {
-            [self startScanning];
-        }
+        [self startScanning];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
@@ -454,6 +453,27 @@
         default:
             break;
     }
+}
+
+
+#pragma mark - QRCodeReader Permission Datasource
+
+- (BOOL)shouldTriggerCompletionEvents {
+    if (self.isInternetRequired) {
+        if ([self isDeviceConnectedToInternet]) {
+            return YES;
+        }
+        else {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Internet connection required." message:@"Please make sure you are connected to the internet and try again." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:action];
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 
 

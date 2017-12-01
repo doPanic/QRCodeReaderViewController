@@ -28,10 +28,27 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
+
+@protocol QRCodeReaderPermissionDatasource <NSObject>
+
+@optional
+/**
+ * @abstract If YES is returned, the QRCodeReader will fire its completion events, once an item gets scanned. Defaults to YES
+ * @since 4.0.2
+ */
+- (BOOL)shouldTriggerCompletionEvents;
+
+@end
+
+
 /**
  * Reader object base on the `AVCaptureDevice` to read / scan 1D and 2D codes.
  */
 @interface QRCodeReader : NSObject
+
+
+@property (weak, nonatomic) id <QRCodeReaderPermissionDatasource> permissionDatasource;
+
 
 #pragma mark - Creating and Inializing QRCode Readers
 /** @name Creating and Inializing QRCode Readers */
