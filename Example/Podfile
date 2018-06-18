@@ -7,6 +7,6 @@ target 'QRCodeReaderViewControllerExample' do
 
   # Pods for QRCodeReaderViewControllerExample
 
-  pod 'Reachability'
+  pod 'VFReachability'
 
 end

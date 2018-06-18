@@ -29,7 +29,7 @@
 #import "QRCodeReaderView.h"
 #import "QRToggleTorchButton.h"
 #import "QRCodeReaderNetStatView.h"
-#import "Reachability.h"
+#import "VFReachability.h"
 
 #define kDefaultActiveText @"Successfully reconnected to the Internet."
 #define kDefaultActiveColor [UIColor greenColor]
@@ -48,7 +48,7 @@
 @property (assign, nonatomic) BOOL                 startScanningAtLoad;
 @property (assign, nonatomic) BOOL                 showSwitchCameraButton;
 @property (assign, nonatomic) BOOL                 showTorchButton;
-@property (strong, nonatomic) Reachability         *reachability;
+@property (strong, nonatomic) VFReachability         *reachability;
 @property (strong, nonatomic) QRCodeReaderNetStatView *netStatView;
 @property (assign, nonatomic) BOOL                 isInternetRequired;
 
@@ -109,7 +109,7 @@
         self.isInternetRequired = isRequired;
         
         if (self.isInternetRequired) {
-            self.reachability = [Reachability reachabilityForInternetConnection];
+            self.reachability = [VFReachability reachabilityForInternetConnection];
             [self.reachability startNotifier];
             activeText = activeText ? activeText : kDefaultActiveText;
             activeColor = activeColor ? activeColor : kDefaultActiveColor;
@@ -428,7 +428,7 @@
 
 
 - (void)reachabilityChanged:(NSNotification *)notification {
-    Reachability *reachability = (Reachability *)[notification object];
+    VFReachability *reachability = (VFReachability *)[notification object];
     switch (reachability.currentReachabilityStatus) {
         case NotReachable:
             [self.netStatView updateNetStat:kQRCodeReaderNetStat_Inactive];
